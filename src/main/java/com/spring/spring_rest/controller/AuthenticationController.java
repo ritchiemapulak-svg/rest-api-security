@@ -54,7 +54,7 @@ public class AuthenticationController {
         @RequestBody AuthRoleRegisterDto authRoleRegisterDto) {
         if(authRoleRepo.existsByName(authRoleRegisterDto.getName())) {
             return new ResponseEntity<>(authRoleRegisterDto
-                .getName() + " already creted.", 
+                .getName() + " already created.", 
                 HttpStatus.BAD_REQUEST);    
         }
             Auth_Role auth_role = new Auth_Role();
